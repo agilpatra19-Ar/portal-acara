@@ -3,158 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Resmi Acara KPU</title>
+    <title>Bedah Buku KPU Kabupaten Belitung</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome untuk Ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts (Inter untuk kesan formal & rapi) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts (Playfair Display untuk Judul Elegan, Inter untuk Teks Bodi) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        .font-serif-elegant { font-family: 'Playfair Display', serif; }
+        
         .fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
         @keyframes fadeIn { 
             from { opacity: 0; transform: translateY(15px); } 
             to { opacity: 1; transform: translateY(0); } 
         }
-        /* Efek hover kaca */
+        
+        /* Efek hover kaca yang elegan */
         .glass-hover:hover {
-            box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.15);
-            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(122, 0, 22, 0.15);
+            transform: translateY(-3px);
+            border-color: #D4AF37;
         }
+
+        /* Warna Custom KPU */
+        .bg-kpu-red { background-color: #7A0016; }
+        .text-kpu-red { color: #7A0016; }
+        .border-kpu-red { border-color: #7A0016; }
+        
+        .bg-kpu-gold { background-color: #D4AF37; }
+        .text-kpu-gold { color: #D4AF37; }
+        .border-kpu-gold { border-color: #D4AF37; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-orange-200 selection:text-orange-900">
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-[#D4AF37] selection:text-[#7A0016]">
 
-    <!-- HEADER / HERO SECTION DENGAN TEMA ORANYE KPU -->
-    <header class="bg-gradient-to-br from-orange-600 via-orange-500 to-orange-700 text-white shadow-xl relative overflow-hidden">
+    <!-- HEADER / HERO SECTION DENGAN TEMA MERAH MARUN & EMAS -->
+    <header class="bg-kpu-red text-white shadow-2xl relative overflow-hidden border-b-4 border-kpu-gold">
         <!-- Aksen motif latar belakang -->
-        <div class="absolute top-0 right-0 opacity-10">
-            <svg width="400" height="400" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="40" stroke="white" stroke-width="10"/>
-                <circle cx="50" cy="50" r="25" stroke="white" stroke-width="8"/>
+        <div class="absolute inset-0 opacity-10">
+            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 100 C 20 0 50 0 100 100 Z" fill="rgba(212, 175, 55, 0.2)"/>
             </svg>
         </div>
 
-        <div class="max-w-5xl mx-auto px-6 py-14 text-center relative z-10 fade-in">
-            <!-- Tempat Logo KPU -->
-            <div class="bg-white w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6 shadow-lg p-2">
-                <i class="fa-solid fa-building-columns text-4xl text-orange-600"></i>
+        <div class="max-w-5xl mx-auto px-6 py-16 text-center relative z-10 fade-in">
+            
+            <!-- Logo & Instansi -->
+            <div class="flex flex-col items-center justify-center mb-8">
+                <!-- Logo KPU Resmi -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/KPU_Logo.svg/300px-KPU_Logo.svg.png" 
+                     alt="Logo KPU" 
+                     class="h-28 w-auto mb-4 drop-shadow-xl hover:scale-105 transition duration-300">
+                <h2 class="text-xl md:text-2xl font-bold tracking-widest text-kpu-gold uppercase drop-shadow-md">
+                    KPU Kabupaten Belitung
+                </h2>
             </div>
             
-            <h1 class="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Portal Acara & Meeting Resmi</h1>
-            <p class="text-lg md:text-xl text-orange-50 mb-6 font-light">Kamis, 17 September 2026 | 09.00 WIB - Selesai</p>
-            <p class="text-sm bg-orange-800/40 inline-block px-5 py-2 rounded-full border border-orange-400/50 backdrop-blur-sm font-semibold tracking-wide">
-                Agenda | Presensi | Materi | E-Sertifikat
+            <!-- Judul Utama Acara -->
+            <h1 class="text-3xl md:text-5xl font-serif-elegant font-bold mb-5 tracking-tight leading-tight drop-shadow-lg text-white">
+                Bedah Buku Seri Pertama
+            </h1>
+            
+            <!-- Garis Emas Pemisah -->
+            <div class="w-32 h-1 bg-kpu-gold mx-auto mb-5 rounded-full shadow-[0_0_10px_rgba(212,175,55,0.5)]"></div>
+            
+            <!-- Subjudul -->
+            <h3 class="text-xl md:text-3xl font-bold mb-2 text-white drop-shadow-md">
+                "Tata Kelola Pemilu di Indonesia"
+            </h3>
+            <p class="text-lg md:text-xl font-light mb-8 italic text-slate-200">
+                Subtema: Pemungutan dan Penghitungan Suara
+            </p>
+            
+            <!-- Tanggal & Waktu -->
+            <p class="text-sm bg-black/40 inline-block px-6 py-3 rounded-full border border-kpu-gold/60 backdrop-blur-md font-semibold tracking-wider text-kpu-gold shadow-lg">
+                <i class="fa-regular fa-calendar-check mr-2"></i> Kamis, 17 September 2026 | 09.00 WIB - Selesai
             </p>
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
+    <main class="max-w-5xl mx-auto px-6 py-14 space-y-14">
 
         <!-- 1. AGENDA & MEETING INFO -->
         <section class="fade-in" style="animation-delay: 0.1s;">
-            <div class="flex items-center gap-3 mb-6 border-b-2 pb-2 border-orange-100">
-                <div class="bg-orange-100 p-2 rounded-lg text-orange-600">
-                    <i class="fa-solid fa-video text-xl"></i>
+            <div class="flex items-center gap-4 mb-8 border-b-2 pb-3 border-slate-200">
+                <div class="bg-[#7A0016]/10 p-3 rounded-xl text-kpu-red">
+                    <i class="fa-solid fa-video text-2xl"></i>
                 </div>
-                <h2 class="text-2xl font-bold text-slate-800">Informasi Ruang Zoom</h2>
+                <h2 class="text-3xl font-bold text-slate-800 font-serif-elegant">Ruang Virtual Zoom</h2>
             </div>
             
-            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 border-t-4 border-t-orange-500 p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center transition-all duration-300 glass-hover">
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 border-t-4 border-t-kpu-red p-6 md:p-10 flex flex-col md:flex-row gap-8 items-center transition-all duration-300 glass-hover">
                 <div class="flex-1 space-y-5 w-full">
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                        <p class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-1">Meeting ID</p>
-                        <p class="text-2xl font-mono font-bold text-slate-800 tracking-wider">927 5868 0090</p>
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 shadow-inner">
+                        <p class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-2">Meeting ID</p>
+                        <p class="text-3xl font-mono font-bold text-slate-800 tracking-wider">927 5868 0090</p>
                     </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                        <p class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-1">Passcode</p>
-                        <p class="text-2xl font-mono font-bold text-slate-800 tracking-wider">Bedahbuku1</p>
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 shadow-inner">
+                        <p class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-2">Passcode</p>
+                        <p class="text-3xl font-mono font-bold text-slate-800 tracking-wider">Bedahbuku1</p>
                     </div>
                 </div>
-                <div class="flex-1 flex flex-col gap-4 w-full">
-                    <a href="https://telkomsel.zoom.us/j/92758680090?pwd=U0gcIWrY2byj71NyT5WKNlvS20u2jb.1" target="_blank" class="w-full text-center bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-6 rounded-xl transition duration-300 shadow-md hover:shadow-lg flex items-center justify-center">
-                        <i class="fa-solid fa-arrow-right-to-bracket mr-3 text-lg"></i> Gabung Zoom Sekarang
+                <div class="flex-1 flex flex-col gap-5 w-full">
+                    <a href="https://telkomsel.zoom.us/j/92758680090?pwd=U0gcIWrY2byj71NyT5WKNlvS20u2jb.1" target="_blank" class="w-full text-center bg-kpu-red hover:bg-[#5a0010] text-white font-bold py-4 px-6 rounded-xl transition duration-300 shadow-lg hover:shadow-xl flex items-center justify-center group">
+                        <i class="fa-solid fa-arrow-right-to-bracket mr-3 text-xl group-hover:translate-x-1 transition-transform"></i> Gabung Zoom Sekarang
                     </a>
-                    <a href="https://drive.google.com/drive/folders/1_rUp7H9q7_1zqw1sUs13TJqSY71O95ya?usp=sharing" target="_blank" class="w-full text-center bg-white hover:bg-slate-50 text-slate-700 font-semibold py-4 px-6 rounded-xl transition duration-300 border-2 border-slate-200 flex items-center justify-center">
-                        <i class="fa-regular fa-image mr-3 text-lg text-orange-500"></i> Unduh Virtual Background
+                    <a href="https://drive.google.com/drive/folders/1_rUp7H9q7_1zqw1sUs13TJqSY71O95ya?usp=sharing" target="_blank" class="w-full text-center bg-white hover:bg-slate-50 text-slate-700 font-semibold py-4 px-6 rounded-xl transition duration-300 border-2 border-slate-200 hover:border-kpu-gold flex items-center justify-center">
+                        <i class="fa-regular fa-image mr-3 text-xl text-kpu-gold"></i> Unduh Virtual Background
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- 2. DAFTAR HADIR (PRESENSI) -->
+        <!-- 2. DAFTAR HADIR (PRESENSI) - SATU TOMBOL BESAR DI TENGAH -->
         <section class="fade-in" style="animation-delay: 0.2s;">
-            <div class="flex items-center gap-3 mb-6 border-b-2 pb-2 border-orange-100">
-                <div class="bg-orange-100 p-2 rounded-lg text-orange-600">
-                    <i class="fa-solid fa-clipboard-check text-xl"></i>
+            <div class="flex items-center gap-4 mb-8 border-b-2 pb-3 border-slate-200">
+                <div class="bg-[#7A0016]/10 p-3 rounded-xl text-kpu-red">
+                    <i class="fa-solid fa-clipboard-check text-2xl"></i>
                 </div>
-                <h2 class="text-2xl font-bold text-slate-800">Daftar Hadir (Presensi)</h2>
+                <h2 class="text-3xl font-bold text-slate-800 font-serif-elegant">Daftar Hadir</h2>
             </div>
-            <p class="text-slate-500 mb-6 font-medium">Silakan pilih peran Anda dalam acara ini untuk mengisi daftar hadir:</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Tombol Peserta -->
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScp2vKyzNpreDOMgd4Uy_em9Le2Sy6MoGLkBicUI75vi3HxeA/viewform?usp=sharing&ouid=107052498837705866639" target="_blank" class="group bg-white hover:bg-orange-50/50 border border-slate-200 hover:border-orange-500 rounded-2xl p-8 text-center shadow-sm transition-all duration-300 glass-hover">
-                    <div class="bg-slate-50 border border-slate-100 w-20 h-20 mx-auto rounded-2xl flex items-center justify-center mb-5 group-hover:bg-orange-500 group-hover:border-orange-500 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-users text-3xl text-slate-400 group-hover:text-white"></i>
+            <div class="max-w-2xl mx-auto">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScp2vKyzNpreDOMgd4Uy_em9Le2Sy6MoGLkBicUI75vi3HxeA/viewform?usp=sharing&ouid=107052498837705866639" target="_blank" class="block group bg-white hover:bg-[#7A0016]/5 border-2 border-slate-200 hover:border-kpu-red rounded-3xl p-10 text-center shadow-md transition-all duration-300 glass-hover">
+                    <div class="bg-slate-50 border border-slate-200 w-24 h-24 mx-auto rounded-full flex items-center justify-center mb-6 group-hover:bg-kpu-red group-hover:border-kpu-red transition-all duration-300 shadow-sm group-hover:shadow-lg">
+                        <i class="fa-solid fa-user-check text-4xl text-slate-400 group-hover:text-kpu-gold transition-colors"></i>
                     </div>
-                    <h3 class="font-bold text-lg text-slate-800 mb-2 group-hover:text-orange-600 transition-colors">Peserta</h3>
-                    <p class="text-sm text-slate-500">Formulir kehadiran bagi tamu undangan.</p>
-                </a>
-                
-                <!-- Tombol Panelis -->
-                <a href="https://drive.google.com/drive/folders/1e6aIWv7IrUsJAmewxxzMZsv6SOpngkBp?usp=sharing" target="_blank" class="group bg-white hover:bg-orange-50/50 border border-slate-200 hover:border-orange-500 rounded-2xl p-8 text-center shadow-sm transition-all duration-300 glass-hover">
-                    <div class="bg-slate-50 border border-slate-100 w-20 h-20 mx-auto rounded-2xl flex items-center justify-center mb-5 group-hover:bg-orange-500 group-hover:border-orange-500 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-user-tie text-3xl text-slate-400 group-hover:text-white"></i>
+                    <h3 class="font-bold text-2xl text-slate-800 mb-3 group-hover:text-kpu-red transition-colors">Formulir Presensi Peserta</h3>
+                    <p class="text-base text-slate-500 px-4">Silakan klik di sini untuk mengisi daftar hadir Anda sebagai bukti keikutsertaan dalam acara Bedah Buku.</p>
+                    
+                    <div class="mt-8 inline-flex items-center text-kpu-red font-semibold group-hover:text-kpu-gold transition-colors">
+                        Isi Daftar Hadir <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
                     </div>
-                    <h3 class="font-bold text-lg text-slate-800 mb-2 group-hover:text-orange-600 transition-colors">Panelis</h3>
-                    <p class="text-sm text-slate-500">Formulir khusus pengisi acara / panelis.</p>
-                </a>
-
-                <!-- Tombol Narasumber -->
-                <a href="https://drive.google.com/drive/folders/1e6aIWv7IrUsJAmewxxzMZsv6SOpngkBp?usp=sharing" target="_blank" class="group bg-white hover:bg-orange-50/50 border border-slate-200 hover:border-orange-500 rounded-2xl p-8 text-center shadow-sm transition-all duration-300 glass-hover">
-                    <div class="bg-slate-50 border border-slate-100 w-20 h-20 mx-auto rounded-2xl flex items-center justify-center mb-5 group-hover:bg-orange-500 group-hover:border-orange-500 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-microphone-lines text-3xl text-slate-400 group-hover:text-white"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-slate-800 mb-2 group-hover:text-orange-600 transition-colors">Narasumber</h3>
-                    <p class="text-sm text-slate-500">Formulir khusus narasumber acara.</p>
                 </a>
             </div>
         </section>
 
-        <!-- 3. MATERI & SERTIFIKAT (GABUNGAN GRID) -->
+        <!-- 3. MATERI & SERTIFIKAT (GRID) -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
             <!-- MATERI -->
             <section class="fade-in" style="animation-delay: 0.3s;">
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 h-full flex flex-col justify-between transition-all duration-300 glass-hover">
+                <div class="bg-white rounded-3xl shadow-md border border-slate-200 p-8 h-full flex flex-col justify-between transition-all duration-300 glass-hover">
                     <div>
-                        <div class="bg-slate-100 w-14 h-14 rounded-full flex items-center justify-center mb-6">
-                            <i class="fa-solid fa-folder-open text-2xl text-slate-600"></i>
+                        <div class="bg-slate-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 border border-slate-200">
+                            <i class="fa-solid fa-folder-open text-3xl text-slate-600"></i>
                         </div>
-                        <h2 class="text-xl font-bold text-slate-800 mb-3">Materi Paparan</h2>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Seluruh materi presentasi dan dokumen pendukung dapat diakses dan diunduh melalui tautan di bawah ini.</p>
+                        <h2 class="text-2xl font-bold text-slate-800 mb-3 font-serif-elegant">Materi Acara</h2>
+                        <p class="text-slate-500 text-base leading-relaxed mb-8">Unduh seluruh materi presentasi dan dokumen pendukung acara "Tata Kelola Pemilu di Indonesia".</p>
                     </div>
-                    <a href="https://drive.google.com/drive/folders/1_rUp7H9q7_1zqw1sUs13TJqSY71O95ya?usp=sharing" target="_blank" class="w-full inline-flex items-center justify-center bg-slate-800 hover:bg-slate-900 text-white font-semibold py-3 px-6 rounded-xl transition duration-300">
-                        <i class="fa-brands fa-google-drive mr-2"></i> Akses Folder Materi
+                    <a href="https://drive.google.com/drive/folders/1_rUp7H9q7_1zqw1sUs13TJqSY71O95ya?usp=sharing" target="_blank" class="w-full inline-flex items-center justify-center bg-slate-800 hover:bg-slate-900 text-white font-semibold py-4 px-6 rounded-xl transition duration-300 shadow-md">
+                        <i class="fa-brands fa-google-drive mr-2 text-lg"></i> Akses Folder Materi
                     </a>
                 </div>
             </section>
 
             <!-- SERTIFIKAT -->
             <section class="fade-in" style="animation-delay: 0.4s;">
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 h-full flex flex-col justify-between transition-all duration-300 glass-hover">
+                <div class="bg-white rounded-3xl shadow-md border border-slate-200 p-8 h-full flex flex-col justify-between transition-all duration-300 glass-hover">
                     <div>
-                        <div class="bg-orange-50 w-14 h-14 rounded-full flex items-center justify-center mb-6">
-                            <i class="fa-solid fa-award text-2xl text-orange-500"></i>
+                        <div class="bg-[#D4AF37]/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 border border-[#D4AF37]/30">
+                            <i class="fa-solid fa-award text-3xl text-kpu-gold"></i>
                         </div>
-                        <h2 class="text-xl font-bold text-slate-800 mb-3">E-Sertifikat</h2>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Sertifikat akan didistribusikan setelah acara. Pastikan Anda telah mengisi daftar hadir dengan nama yang benar.</p>
+                        <h2 class="text-2xl font-bold text-slate-800 mb-3 font-serif-elegant">E-Sertifikat</h2>
+                        <p class="text-slate-500 text-base leading-relaxed mb-8">Sertifikat elektronik akan didistribusikan setelah acara. Pastikan Anda telah mengisi presensi dengan benar.</p>
                     </div>
-                    <!-- JANGAN LUPA GANTI LINK DI BAWAH INI -->
-                    <a href="LINK_GDRIVE_SERTIFIKAT_DI_SINI" target="_blank" class="w-full inline-flex items-center justify-center bg-orange-100 hover:bg-orange-200 text-orange-700 font-semibold py-3 px-6 rounded-xl transition duration-300">
-                        <i class="fa-solid fa-download mr-2"></i> Unduh Sertifikat
+                    <!-- ========================================== -->
+                    <!-- GANTI TULISAN '#LINK-SERTIFIKAT-DISINI' DI BAWAH INI DENGAN LINK GDRIVE SERTIFIKAT ANDA -->
+                    <!-- ========================================== -->
+                    <a href="#LINK-SERTIFIKAT-DISINI" target="_blank" class="w-full inline-flex items-center justify-center bg-[#D4AF37] hover:bg-[#b89528] text-white font-bold py-4 px-6 rounded-xl transition duration-300 shadow-md">
+                        <i class="fa-solid fa-download mr-2 text-lg"></i> Unduh Sertifikat
                     </a>
                 </div>
             </section>
@@ -163,8 +183,14 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-slate-900 text-slate-400 py-10 mt-12 text-center text-sm border-t-4 border-orange-600">
-        <p>&copy; 2026 KPU Kabupaten Belitung. Seluruh hak cipta dilindungi.</p>
+    <footer class="bg-slate-900 text-slate-400 py-12 mt-12 text-center text-sm border-t-4 border-kpu-red">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col items-center justify-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/KPU_Logo.svg/300px-KPU_Logo.svg.png" 
+                 alt="Logo KPU Kecil" 
+                 class="h-10 w-auto mb-4 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition duration-300">
+            <p>&copy; 2026 Komisi Pemilihan Umum Kabupaten Belitung.</p>
+            <p class="mt-2 text-slate-500">Semua hak cipta dilindungi.</p>
+        </div>
     </footer>
 
 </body>
