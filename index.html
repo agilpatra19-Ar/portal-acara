@@ -39,7 +39,7 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-[#D4AF37] selection:text-[#7A0016]">
 
-    <!-- HEADER / HERO SECTION DENGAN TEMA MERAH MARUN & EMAS -->
+    <!-- HEADER / HERO SECTION -->
     <header class="bg-kpu-red text-white shadow-2xl relative overflow-hidden border-b-4 border-kpu-gold">
         <!-- Aksen motif latar belakang -->
         <div class="absolute inset-0 opacity-10">
@@ -49,8 +49,7 @@
         </div>
 
         <div class="max-w-5xl mx-auto px-6 py-16 text-center relative z-10 fade-in">
-            
-            <!-- Logo & Instansi (LINK LOGO SUDAH DIPERBAIKI) -->
+            <!-- Logo & Instansi -->
             <div class="flex flex-col items-center justify-center mb-8">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/KPU_Logo.svg" 
                      alt="Logo KPU" 
@@ -60,15 +59,12 @@
                 </h2>
             </div>
             
-            <!-- Judul Utama Acara -->
             <h1 class="text-3xl md:text-5xl font-serif-elegant font-bold mb-5 tracking-tight leading-tight drop-shadow-lg text-white">
                 Bedah Buku Seri Pertama
             </h1>
             
-            <!-- Garis Emas Pemisah -->
             <div class="w-32 h-1 bg-kpu-gold mx-auto mb-5 rounded-full shadow-[0_0_10px_rgba(212,175,55,0.5)]"></div>
             
-            <!-- Subjudul -->
             <h3 class="text-xl md:text-3xl font-bold mb-2 text-white drop-shadow-md">
                 "Tata Kelola Pemilu di Indonesia"
             </h3>
@@ -76,7 +72,6 @@
                 Subtema: Pemungutan dan Penghitungan Suara
             </p>
             
-            <!-- Tanggal & Waktu -->
             <p class="text-sm bg-black/40 inline-block px-6 py-3 rounded-full border border-kpu-gold/60 backdrop-blur-md font-semibold tracking-wider text-kpu-gold shadow-lg">
                 <i class="fa-regular fa-calendar-check mr-2"></i> Kamis, 17 September 2026 | 09.00 WIB - Selesai
             </p>
@@ -96,15 +91,26 @@
             
             <div class="bg-white rounded-2xl shadow-md border border-slate-200 border-t-4 border-t-kpu-red p-6 md:p-10 flex flex-col md:flex-row gap-8 items-center transition-all duration-300 glass-hover">
                 <div class="flex-1 space-y-5 w-full">
+                    <!-- Meeting ID -->
                     <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 shadow-inner">
                         <p class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-2">Meeting ID</p>
                         <p class="text-3xl font-mono font-bold text-slate-800 tracking-wider">927 5868 0090</p>
                     </div>
+                    
+                    <!-- Passcode dengan Fitur Hide/Show (Mata) -->
                     <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 shadow-inner">
                         <p class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-2">Passcode</p>
-                        <p class="text-3xl font-mono font-bold text-slate-800 tracking-wider">Bedahbuku1</p>
+                        <div class="flex items-center justify-between">
+                            <!-- Teks default yang disembunyikan -->
+                            <p id="zoom-passcode" class="text-3xl font-mono font-bold text-slate-800 tracking-wider">**********</p>
+                            <!-- Tombol Mata -->
+                            <button onclick="togglePasscode()" class="text-slate-400 hover:text-kpu-red transition-colors focus:outline-none p-2 rounded-full hover:bg-slate-200">
+                                <i id="toggle-icon" class="fa-solid fa-eye text-xl"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
+
                 <div class="flex-1 flex flex-col gap-5 w-full">
                     <a href="https://telkomsel.zoom.us/j/92758680090?pwd=U0gcIWrY2byj71NyT5WKNlvS20u2jb.1" target="_blank" class="w-full text-center bg-kpu-red hover:bg-[#5a0010] text-white font-bold py-4 px-6 rounded-xl transition duration-300 shadow-lg hover:shadow-xl flex items-center justify-center group">
                         <i class="fa-solid fa-arrow-right-to-bracket mr-3 text-xl group-hover:translate-x-1 transition-transform"></i> Gabung Zoom Sekarang
@@ -140,9 +146,8 @@
             </div>
         </section>
 
-        <!-- 3. MATERI & SERTIFIKAT (GRID) -->
+        <!-- 3. MATERI & SERTIFIKAT -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
             <!-- MATERI -->
             <section class="fade-in" style="animation-delay: 0.3s;">
                 <div class="bg-white rounded-3xl shadow-md border border-slate-200 p-8 h-full flex flex-col justify-between transition-all duration-300 glass-hover">
@@ -151,7 +156,7 @@
                             <i class="fa-solid fa-folder-open text-3xl text-slate-600"></i>
                         </div>
                         <h2 class="text-2xl font-bold text-slate-800 mb-3 font-serif-elegant">Materi Acara</h2>
-                        <p class="text-slate-500 text-base leading-relaxed mb-8">Unduh seluruh materi presentasi dan dokumen pendukung acara Bedah Buku Seri I KPU Kabupaten Belitung.</p>
+                        <p class="text-slate-500 text-base leading-relaxed mb-8">Unduh seluruh materi presentasi dan dokumen pendukung acara "Tata Kelola Pemilu di Indonesia".</p>
                     </div>
                     <a href="https://drive.google.com/drive/folders/1_rUp7H9q7_1zqw1sUs13TJqSY71O95ya?usp=sharing" target="_blank" class="w-full inline-flex items-center justify-center bg-slate-800 hover:bg-slate-900 text-white font-semibold py-4 px-6 rounded-xl transition duration-300 shadow-md">
                         <i class="fa-brands fa-google-drive mr-2 text-lg"></i> Akses Folder Materi
@@ -177,11 +182,10 @@
                     </a>
                 </div>
             </section>
-            
         </div>
     </main>
 
-    <!-- FOOTER DENGAN LOGO KECIL (SUDAH DIPERBAIKI) -->
+    <!-- FOOTER -->
     <footer class="bg-slate-900 text-slate-400 py-12 mt-12 text-center text-sm border-t-4 border-kpu-red">
         <div class="max-w-5xl mx-auto px-6 flex flex-col items-center justify-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/KPU_Logo.svg" 
@@ -191,6 +195,29 @@
             <p class="mt-2 text-slate-500">Semua hak cipta dilindungi.</p>
         </div>
     </footer>
+
+    <!-- SCRIPT UNTUK FITUR MATA PASSCODE -->
+    <script>
+        function togglePasscode() {
+            const passcodeElement = document.getElementById('zoom-passcode');
+            const iconElement = document.getElementById('toggle-icon');
+            
+            // Cek jika saat ini sedang disembunyikan (berbintang)
+            if (passcodeElement.innerText === '**********') {
+                // Tampilkan Passcode Asli
+                passcodeElement.innerText = 'Bedahbuku1';
+                // Ubah ikon mata menjadi mata dicoret
+                iconElement.classList.remove('fa-eye');
+                iconElement.classList.add('fa-eye-slash');
+            } else {
+                // Sembunyikan kembali jadi bintang
+                passcodeElement.innerText = '**********';
+                // Kembalikan ikon ke mata biasa
+                iconElement.classList.remove('fa-eye-slash');
+                iconElement.classList.add('fa-eye');
+            }
+        }
+    </script>
 
 </body>
 </html>
